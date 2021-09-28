@@ -63,25 +63,41 @@
       </ul>
       
       <p>To accomplish this goal, we first used wires to connect servo motors and Arduino Nano Every to power, then used functions in Servo.h library to control the servos.</p>
-      <h3>Below is our robot completing this task:</h3> 
+      <h3>Below is a video of our robot completing this task:</h3> 
       <video width="640" height="480" controls>
       <source src="videos/Lab1a.mp4" type="video/mp4">
       </video>      
       
-      <p>We encountered some problems in this part. We struggled to adjust the servos in order to let it go straightly forward. Initially we set speed to 45 and 135, which should give the left and right servo the same speed. Yet the robot keeps turning to the left. Do reseolve it, we first tried to tighten the screw on both wheels to reduce wobble. Then we calibrated the motors by writing both servo to 90, and turning the middle-point adjustment potentiometer until they stopped moving.</p>
+      <p>We encountered some problems in this part. We struggled to adjust the servos in order to let it go straightly forward. Initially we set speed to 45 and 135, which should give the left and right servo the same speed. Yet the robot kept turning to the left. To reseolve it, we first tried to tighten the screw on both wheels to reduce wobble. Then we calibrated the motors by writing both servo to 90, and turning the middle-point adjustment potentiometer until they stopped moving.</p>
       
 <h2>
-<a id="Ultrasonic Sensors" class="anchor" href="#Ultrasonic Sensors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ultrasonic Sensors:</h2>      
-      
+<a id="Ultrasonic Sensors" class="anchor" href="#Ultrasonic Sensors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ultrasonic Sensors:</h2>
+      <p>To detect the distance to wall, we added 3 ultrasonic sensors: on the front, left, right, respectively. Since there's only limited number of pins on the Nano, we connected all three US sensors' Trigger pins together, and then connected to one pin on Nano. The result was that we can trigger all US sensors at once, and then detected the back signal using the Echo pin on each sensors. With the echo time interval and speed of sound, we can calculate distance to obstacles on three sides.</p>
+      <h3>Below is the snapshots of our robot completing this task:</h3> 
       <img src="images/Lab1a.jpg" alt="Robot front view" width="400" height="300">
       <img src="images/Lab1b.jpg" alt="Robot side view" width="400" height="300">
 
+      <p>Then comes the navigation task:</p>
+      <img src="images/Lab1c.jpg" alt="Robot front view" width="500" height="500">
+      <ul>
+      <li>Start in position 1, immobile.</li>
+      <li>Once you press the RESET button on the Nano, it will remain motionless for 1 second, then head North towards position 2.</li>
+      <li>Once at position 2, it will turn smoothly in place to its left to face West, then navigate towards position 3.</li>
+      <li>Once at position 3, it will turn smoothly in place to its left to face South, then navigate towards position 4.</li>
+      <li>Once at position 4, it will turn smoothly in place to its right to face North, then navigate towards position 3.</li>
+      <li>Once at position 3, it will turn smoothly in place to its right to face East, then navigate towards position 2.</li>
+      <li>Once at position 2, it will turn smoothly in place to its right to face South, then navigate towards position 1.</li>
+      <li>Once at position 1, it will turn smoothly in place to its left 540 degrees (1 ½ turns) ending facing North where it will remain in place stationary.</li>
+      </ul>
       
+      
+     
+      <p>In order for the robot to navigate the maze, we added a series of conditional statements to make a turn only when the ultrasonic sensors detected a wall. 
       
       
       
 <video width="640" height="480" controls>
-<source src="videos/Lab1.mp4" type="video/mp4">
+<source src="videos/Lab1b.mp4" type="video/mp4">
 </video>      
       
       
