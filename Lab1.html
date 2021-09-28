@@ -29,7 +29,7 @@
 <li>Build a robot frame with Servos and Arduino Nano Every.</li>
 <li>Add Ultrasonic Sensors to navigate a maze autonomously.</li>
 </ul>
-      
+
 <h2>
 <a id="Materials" class="anchor" href="#Materials" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Materials:</h2>
 <ul>
@@ -46,14 +46,28 @@
 <li>Wood and other for walls</li>
 </ul>      
 
+      <h2>
 <a id="Setup" class="anchor" href="#Setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup:</h2>
-    <p>For the first part, we mounted a front caster wheel and two servo motors with wheels on the robot frame. We then affixed an AA battery holder at the back of the frame and a 9V battery on the front of it using Velcro slices. On top of it we positioned our breadboard with Arduino Nano Every inserted. To protect exposed pins of the Arduino, we placed insulation tape along the sides of it. Finally, in order to verify that the Arduino was functioning correctly and that the IDE was configured properly, we ran a simple blink code to flash the on-board LED. Once this was done, we are ready for the next part: coding with servos.
+    <p>For the first part, we mounted a front caster wheel and two servo motors with wheels on the robot frame. We then affixed an AA battery holder at the back of the frame and a 9V battery on the front of it using Velcro slices. On top of it we positioned our breadboard with Arduino Nano Every inserted. To protect exposed pins of the Arduino, we placed insulation tape along the sides of it. Finally, in order to verify that the Arduino was functioning correctly and that the IDE was configured properly, we ran a simple blink code to flash the on-board LED. Once this was done, we are ready for the next part: coding with servos.</p>
+
+<h2>
+<a id="Servos" class="anchor" href="#Servos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Servos:</h2>
+    <p>The task for this part of lab is to program a sequence of movements of our robot:</p>
+      <ul>
+      <li>Starts in place facing north, motionless</li>
+      <li>After 5 seconds, goes north over approximately 20 cm, then stops, still facing north</li>
+      <li>After 1 second, turns to its right towards the east in place by approximately 90 degrees, then stops, facing east</li>
+      <li>After 1 second, turns to its left in place by 270 degrees, then stops, facing south</li>
+      <li>After 1 second, goes south over approximately 20 cm, then stops, still facing south</li>
+      <li>After 1 second, turns to its right by 180 degrees, then stops, facing north</li>
+      </ul>
+      
+      <p>To accomplish this goal, we first used wires to connect servo motors and Arduino Nano Every to power, then used functions in Servo.h library to control the servos.</p>
+      <h3>Below is our robot completing this task:</h3> 
+      <img src="images/Lab1a.jpg" alt="Robot front view" width="400" height="300">
+      <img src="images/Lab1b.jpg" alt="Robot side view" width="400" height="300">
 
       
-
-<h3>Our final robot for Lab 1:</h3>
-<img src="images/Lab1a.jpg" alt="Robot front view" width="400" height="300">
-<img src="images/Lab1b.jpg" alt="Robot side view" width="400" height="300">
       
       
       
