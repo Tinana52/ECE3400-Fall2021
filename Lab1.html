@@ -48,7 +48,8 @@
 
       <h2>
 <a id="Setup" class="anchor" href="#Setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup:</h2>
-    <p>For the first part, we mounted a front caster wheel and two servo motors with wheels on the robot frame. We then affixed an AA battery holder at the back of the frame and a 9V battery on the front of it using Velcro slices. On top of it we positioned our breadboard with Arduino Nano Every inserted. To protect exposed pins of the Arduino, we placed insulation tape along the sides of it. Finally, in order to verify that the Arduino was functioning correctly and that the IDE was configured properly, we ran a simple blink code to flash the on-board LED. Once this was done, we are ready for the next part: coding with servos.</p>
+    <p>For the first part, we mounted a front caster wheel and two servo motors with wheels on the robot frame. We then affixed an AA battery holder at the back of the frame and a 9V battery on the front of it using Velcro slices. On top of it we positioned our breadboard with Arduino Nano Every inserted. To protect exposed pins of the Arduino, we placed insulation tape along the sides of it. Finally, in order to verify that the Arduino was functioning correctly and that the IDE was configured properly, we ran a simple blink code to flash the on-board LED.</p>
+    <p>Once this was done, we are ready for the next part: coding with servos.</p>
 
 <h2>
 <a id="Servos" class="anchor" href="#Servos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Servos:</h2>
@@ -68,7 +69,8 @@
       <source src="videos/Lab1a.mp4" type="video/mp4">
       </video>      
       
-      <p>We encountered some problems in this part. We struggled to adjust the servos in order to let it go straightly forward. Initially we set speed to 45 and 135, which should give the left and right servo the same speed. Yet the robot kept turning to the left. To reseolve it, we first tried to tighten the screw on both wheels to reduce wobble. Then we calibrated the motors by writing both servo to 90, and turning the middle-point adjustment potentiometer until they stopped moving.</p>
+      <p>We encountered some problems in this part. We struggled to adjust the servos in order to let it go straightly forward. Initially we set speed to 45 and 135, which should give the left and right servo the same speed. Yet the robot kept turning to the left.</p>
+      <p>To reseolve it, we first tried to tighten the screw on both wheels to reduce wobble. Then we calibrated the motors by writing both servo to 90, and turning the middle-point adjustment potentiometer until they stopped moving.</p>
       
 <h2>
 <a id="Ultrasonic Sensors" class="anchor" href="#Ultrasonic Sensors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ultrasonic Sensors:</h2>
@@ -107,7 +109,7 @@
         
       <p>The arduino evaluated one of our case condition abnormally, and we weren't able to make the robot go forward after turning at position 2. We tried several ways to debug, like adding delay, using millis(), and record its movement with bool variable and int count, but none of those helped. After a long time of debugging, we decided to change our code using if-else statements. We used the extra lab sessions this week to rewrite our code and ran a lot of tests, which finally resolved the problem.</p>
         
-      <p>Another challenge was that when we changing environment, like when we brought our robot home and let it move on the cement floor, it performed differently from when it moved on tables of the lab room because of difference in friction. So we had to change servos' speed and time in order to achieve full turns.</p>
+      <p>Another challenge was that when we changing environment, like when we brought our robot home and let it move on the cement floor, it performed differently from when it moved on tables of the lab room because of difference in friction. So we had to change servos' speed and time in order to achieve full turns and enough distances.</p>
 
       
       
