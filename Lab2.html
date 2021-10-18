@@ -87,33 +87,35 @@
 <a id="3." class="anchor" href="#3." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Test the Generated Signal </h4>  
       <p> To confirm that the signal generator is indeed generating a sinusoidal waveform with a frequency of 1kHz and a peak‐to‐peak voltage of 1.2V, we used the oscilloscope by connecting its red wire to where we connected the red wire from the signal generator, and connecting the black wire from the oscilloscope to the black wire from the signal generator.</p>
       <p> The figure below shows the trace for the 1kHz signal.</p>
-      <img src="images/lab2b.jpg" alt="IR detection circuit" width="600" height="300">
+      <img src="images/lab2b.jpg" alt="Test the Generated Signal" width="600" height="300">
       <p> Note that we set the signal generator to output a 1.2V peak‐to‐peak signal, but the oscilloscope is reading a max voltage more than 2V. The reason is that there is an impedance mismatch between the signal generator’s and the oscilloscope’s. But it doesn’t matter so much for us, because we are interested in the frequency.</p>
       
       
       <h4>
 <a id="4." class="anchor" href="#4." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Test the Phototransistor Circuit</h4>
       <p> Now we can play around with our detection circuit and IR emitting circuit. By moving the LED in our IR emitting circuit around the phototransistor, we enabled the phototransistor to detect the signal while we were using the oscilloscope to display the signal it detected (see figure below).</p>
-      <img src="images/lab2c.jpg" alt="IR detection circuit" width="500" height="300">
+      <img src="images/lab2c.jpg" alt="Test the Phototransistor" width="500" height="300">
 
       
        <h4>
 <a id="5." class="anchor" href="#5." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Measure Signal's frequency with Nano</h4>
       <p> For this part,  we used the peripheral Analog Comparator (AC) along with TCB that are integrated within the ATMega4809 microcontroller to measure the frequency of the IR signal.</p>
       <p> We first disconnected the oscilloscope’s probes from our circuit and then connected the output of our detection circuit to an analog pin of Nano.</p>
+      <img src="images/lab2g.jpg" alt="Measure Signal's frequency with Nano" width="300" height="600">
+      
       <p> The measured frequencies are displayed by the Serial Monitor:</p>
-      <img src="images/lab2d.jpg" alt="IR detection circuit" width="600" height="350">
+      <img src="images/lab2d.jpg" alt="Serial Monitor" width="600" height="350">
       
       
       <h3>
 <a id="Part 2" class="anchor" href="#Part 2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: 4‐DIGIT 7‐SEGMENT DISPLAY</h3>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p> For the second part of the lab, we deals with building the display component of the base station on a separate breadboard, which consist of a Nano, 4‐digit 7‐segment display, transistors, resistors, as well as a shift register to reduce the number of pins that will be used on the Nano.</p>
+      <p> The Schematic for connectivity is shown below:</p>
+      <img src="images/lab2e.png" alt="Schematic" width="600" height="600">
       
-      
-      
-      
+      <p> After finishing building the circuit, we uploaded the code to the Aruino to see whether the 7-segment display correctly display the numbers we set in the loop() function of our code.</p>
+      <p> The figure below shows our 7-segment board displaying the number 2468:</p>
+      <img src="images/lab2f.png" alt="display2468" width="300" height="600">
       
       
       
