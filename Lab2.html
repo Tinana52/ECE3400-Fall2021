@@ -72,13 +72,27 @@
       <h3>
 <a id="For part 1" class="anchor" href="#For part 1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For part 1: LIGHT DETECTION AND FREQUENCY MEASUREMENT</h3>
       <h4>
-<a id="1." class="anchor" href="#1." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. IR Detection Circuit on the Robot</h4>
+<a id="1." class="anchor" href="#1." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Build IR Detection Circuit on the Robot</h4>
       <p>In order for our robot to navigate through a maze and find a number of treasures which consist of infrared (IR) LEDs positioned randomly in the maze, we need enable it to detect IR light in three directions as it moves forward.</p>
       <p>To build an IR detection circuit on our robot, we followed the graph below, where the 2.2kΩ resistor acts to pull down the voltage.</p>
       <img src="images/lab2a.png" alt="IR detection circuit" width="600" height="300">
-    
+      
+      
       <h4>
-<a id="2." class="anchor" href="#2." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Testing the Phototransistor Circuit</h4>
+<a id="2." class="anchor" href="#2." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Build IR Emitting Circuit</h4>  
+      <p> To measure a blinking IR signal, we then built a blinking LED circuit that will act as a treasure by connecting the LED in series with a resistor. For resistance, we choosed 60Ω so that with a voltage of 1.2V the current flowing through the LED will be 20 mA .</p>
+      <p> We then used the signal generator as power source for our LED, which generate a sinusoidal waveform with 1kHz frequency and 1.2V peak-to-peak voltage.</p>
+
+      <h4>
+<a id="3." class="anchor" href="#3." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Test the Generated Signal </h4>  
+      <p> To confirm that the signal generator is indeed generating a sinusoidal waveform with a frequency of 1kHz and a peak‐to‐peak voltage of 1.2V, we used the oscilloscope by connecting its red wire to where we connected the red wire from the signal generator, and connecting the black wire from the oscilloscope to the black wire from the signal generator.</p>
+      <p> The figure below shows the trace for the 1kHz signal.</p>
+      <img src="images/lab2b.jpg" alt="IR detection circuit" width="600" height="300">
+      <p> Note that we set the signal generator to output a 1.2V peak‐to‐peak signal, but the oscilloscope is reading a max voltage more than 2V. The reason is that there is an impedance mismatch between the signal generator’s and the oscilloscope’s. But it doesn’t matter so much for us, because we are interested in the frequency.</p>
+      
+      
+      <h4>
+<a id="4." class="anchor" href="#4." aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Testing the Phototransistor Circuit</h4>
       <p></p>
 
       
