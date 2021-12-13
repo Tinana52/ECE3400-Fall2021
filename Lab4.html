@@ -62,7 +62,7 @@
        <img src="images/lab4a.jpg" alt="lab4a" width="550" height="400">
        <img src="images/lab4b.jpeg" alt="lab4b" width="400" height="550">
        <p>After successfully soldering two PCB adapters, we connected it with pins D9‐D12 of the Nano on breadboard, then connected the MISO (D12) and MOSI (D11) pins to the transceiver, as well as pins D9 and D10 which will be used for CS and CE.</p>
-       <p>Fro the remained three pins on the adapter, we connected the Ground pin of the adapter to the common Ground on our breadboard, connected the +3.3V pin of the adapter to the +3.3V pin on the Nano, and connected the SCK pin of the adapter to the SCK pin on the Nano.</p>       
+       <p>For the remained three pins on the adapter, we connected the Ground pin of the adapter to the common Ground on our breadboard, connected the +3.3V pin of the adapter to the +3.3V pin on the Nano, and connected the SCK pin of the adapter to the SCK pin on the Nano.</p>       
        <img src="images/lab4c.jpeg" alt="lab4c" width="550" height="400">
        <p>For the coding part, we changed the pipes in both files so that each student group has their own pipes, thus avoiding disturbance from signals produced by other group's transmitters when we turned on our RF transceiver.</p>
     
@@ -70,26 +70,26 @@
        
 <h3>
 <a id="2." class="anchor" href="#2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Non‐Blocking Coding</h3> 
-       <p> </p>
+       <p>To avoid any blockings in our code, I used millis() to replace the previous delay() functions. Also, we didn't use for loops is our code. </p>
        
 <h3>
 <a id="3." class="anchor" href="#3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Replace analogRead()</h3> 
-       <p> </p>
+       <p>We used hard‐coding of the ADC on the Nano to replace analogRead(). </p>
        
        
 <h3>
 <a id="4." class="anchor" href="#4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. FFT & Override Button</h3> 
-       <p> </p>
-       
-       
+       <p>For the FFT part, we reused code in lab3 with minor changes so that when the microphone picks up sound with frequency about 950Hz (which is the signal for our car to begin navigation), it will enter the state of moving. We implemented this by checking the spectrum obtained with a sound frequency of 950 Hz and therefore determine the threshold of bin values for distinguishing between 950Hz and non-950Hz. </p>
+       <p>For the override button, the purpose for it is if the robot does not start to move by the end of the melody, we can press this button to signify to our robot to start navigating.</p>
+       <p>To implement this function, we simply built a small circuit on our breadboard and used a bool variable to determine whether it's time to start moving.</p>
 <h3>
 <a id="5." class="anchor" href="#5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Navigation</h3> 
-       <p> </p>
-       
+       <p>We applied Right Wall Following Algorithm to enable our robot navigate intelligently in maze. We used switch case to implement this: the default case is going forward, unless the condition for turning-left 90 degrees, turning-right 90 degrees, or turn-round 180 degrees are met, which will cause it jump to the corresponding case when goes into the main loop of our code next time.</p>
+       <p>Also, we applied millis() in cases for turning, so when our car finished turning with preset speed and the preset amount of time has passed, it will go back to the default case when entering main loop next time.</p>
        
 <h3>
 <a id="6." class="anchor" href="#6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. PID Control</h3> 
-       <p> </p>
+       <p>In order to make our car self-adjustable, we implemented PID control when it's going forward. We spent a lot of time on adjusting parameters and finally decided to use only PD control by comparing the actual distance to the right wall with the expected distance, and adjusting speed of servos accordingly.</p>
        
        
 <h3>
