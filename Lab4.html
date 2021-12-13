@@ -81,14 +81,14 @@
 <a id="4." class="anchor" href="#4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. FFT & Override Button</h3> 
        <p>For the FFT part, we reused code in lab3 with minor changes so that when the microphone picks up sound with frequency about 950Hz (which is the signal for our car to begin navigation), it will enter the state of moving. We implemented this by checking the spectrum obtained with a sound frequency of 950 Hz and therefore determine the threshold of bin values for distinguishing between 950Hz and non-950Hz. </p>
        <p>Here's an example FFT spectrum for sound with 950Hz: </p>
-       <img src="images/lab4k.jpeg" alt="lab4k" width="500" height="400">
+       <img src="images/lab4k.jpg" alt="lab4k" width="500" height="400">
        <p>For the override button, the purpose for it is if the robot does not start to move by the end of the melody, we can press this button to signify to our robot to start navigating.</p>
        <p>To implement this function, we simply built a small circuit on our breadboard and used a bool variable to determine whether it's time to start moving.</p>
 <h3>
 <a id="5." class="anchor" href="#5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Navigation</h3> 
        <p>We applied Right Wall Following Algorithm to enable our robot navigate intelligently in maze. We used switch case to implement this: the default case is going forward, unless the condition for turning-left 90 degrees, turning-right 90 degrees, or turn-round 180 degrees are met, which will cause it jump to the corresponding case when goes into the main loop of our code next time.</p>
        <p>Here's the setup for the maze: </p>
-       <img src="images/lab4j.jpeg" alt="lab4j" width="500" height="500">
+       <img src="images/lab4j.jpg" alt="lab4j" width="500" height="500">
        <p>Also, we applied millis() in cases for turning, so when our car finished turning with preset speed and the preset amount of time has passed, it will go back to the default case when entering main loop next time.</p>
        
 <h3>
